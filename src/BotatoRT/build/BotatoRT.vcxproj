@@ -45,10 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\3rdParty\AdafruitMotorHAT.h" />
-    <ClInclude Include="..\..\BotatoMcu\BotatoMcu.h" />
+    <ClInclude Include="..\..\Include\I2cMcu.h" />
+    <ClInclude Include="..\LowLevelMcu.h" />
     <ClInclude Include="..\common.h" />
     <ClInclude Include="..\Timing.h" />
     <ClInclude Include="..\precomp.h" />
+    <ClInclude Include="..\WinRtHelpers.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{F2BD1D94-1C19-4051-9EE0-F6D28ACBA973}</ProjectGuid>

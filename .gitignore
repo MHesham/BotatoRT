@@ -1,3 +1,12 @@
+src/BotatoMcu/__vm/
+src/BotatoRT/.vs/
+src/BotatoRT/build/.vs/
+temp/
+bin/
+
+#VS
+*.sdf
+*.user
 # Compiled Object files
 *.slo
 *.lo

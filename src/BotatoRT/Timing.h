@@ -16,7 +16,7 @@
 
 #pragma once
 
-namespace BotatoRT {
+namespace Botato {
 
     class Delay
     {

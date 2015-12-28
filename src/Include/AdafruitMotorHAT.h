@@ -29,7 +29,7 @@
 
 #pragma once
 
-namespace Botato {
+namespace BotatoRT {
 
     enum PCA9685PwmFrequency
     {

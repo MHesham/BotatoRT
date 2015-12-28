@@ -25,7 +25,7 @@
 #define SAFE_CLOSE(X)	if (X) { CloseHandle(X); (X) = NULL; }
 #define ROUNDUP(X, M)	((((X) / (M)) * (M)) + ((X) % (M) > 0 ? (M) : 0))
 
-namespace BotatoRT {
+namespace Botato {
 
     class Logger
     {
@@ -45,26 +45,26 @@ namespace BotatoRT {
     };
 
 #ifdef LOG_VERBOSE
-#define LogVerbose(S, ...) BotatoRT::Logger::DbgPrintf(L##S##"\n", __VA_ARGS__)
+#define LogVerbose(S, ...) Botato::Logger::DbgPrintf(L##S##"\n", __VA_ARGS__)
 #else
 #define LogVerbose(S, ...)
 #endif
 
 #ifdef LOG_FUNC_TRANSITION
-#define LogEnter() BotatoRT::Logger::DbgPrintf(L##"->" __FUNCTION__ "\n")
-#define LogExit() BotatoRT::Logger::DbgPrintf(L##"<-" __FUNCTION__ "\n")
+#define LogEnter() Botato::Logger::DbgPrintf(L##"->" __FUNCTION__ "\n")
+#define LogExit() Botato::Logger::DbgPrintf(L##"<-" __FUNCTION__ "\n")
 #else
 #define LogEnter()
 #define LogExit()
 #endif
 
-#define LogInfo(S, ...) BotatoRT::Logger::DbgPrintf(L##S##"\n", __VA_ARGS__)
-#define LogError(S, ...) BotatoRT::Logger::DbgPrintf(L##"Error: "##S##"\n", __VA_ARGS__)
-#define LogWarning(S, ...) BotatoRT::Logger::DbgPrintf(L##"Warning: "##S##"\n", __VA_ARGS__)
+#define LogInfo(S, ...) Botato::Logger::DbgPrintf(L##S##"\n", __VA_ARGS__)
+#define LogError(S, ...) Botato::Logger::DbgPrintf(L##"Error: "##S##"\n", __VA_ARGS__)
+#define LogWarning(S, ...) Botato::Logger::DbgPrintf(L##"Warning: "##S##"\n", __VA_ARGS__)
 
     static int MapRange(int n, int n0, int n1, int m0, int m1)
     {
         double p = (double)(n - n0) / (double)(n1 - n0);
         return m0 + (int)((m1 - m0) * p);
     }
-} // namespace BotatoRT
+} // namespace Botato
